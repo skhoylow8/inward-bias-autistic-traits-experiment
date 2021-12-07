@@ -16,7 +16,7 @@
         <p class="instructions center-text" id="instr-text"></p>
         <img id="instr-img" src="media/blank.png" draggable="false" alt="Image Error: Please email yichiachen@g.ucla.edu with the message 'IMG-ERROR' to receive credit."></img>
         <div id="instr-test-frame" style="display: none; background-image: url('media/prac_background.png');">
-            <img id="instr-test-img" src="media/prac.png" alt="Image Error: Please email yichiachen@g.ucla.edu with the message 'IMG-ERROR' to receive credit." draggable="false" style=" cursor: auto;">
+            <img id="instr-test-img" src="media/prac.png" alt="Image Error: Please email yichiachen@g.ucla.edu with the message 'IMG-ERROR' to receive credit." draggable="false" style="cursor: auto; left: 220px;">
         </div>
         <button class="button" id="next-button" onclick="instr.next()">NEXT</button>
         <!--======== INFORMED CONSENT FORM ========-->
@@ -83,20 +83,20 @@
                 Your participation is VOLUNTARY. You may withdraw from the experiment at any time
                 without suffering any negative consequences.<br /><br />
 
-                <strong>Identification of Investigators</strong><br />
+                <!-- <strong>Identification of Investigators</strong><br />
                 If you have any questions, feel free to contact Dr. Hongjing Lu (hongjing@ucla.edu), at the
-                Department of Psychology, UCLA, 405 Hillgard Ave., Los Angeles, CA 90095-1563.<br /><br />
+                Department of Psychology, UCLA, 405 Hillgard Ave., Los Angeles, CA 90095-1563.<br /><br /> -->
 
                 <strong>Rights of Research Subjects</strong><br />
                 You may withdraw your consent at any time and discontinue participation without penalty. You
                 are not waiving any legal claims, rights or remedies because of your participation in this research
                 study.<br /><br />
 
-                <strong>UCLA Office of the Human Research Protection Program (OHRPP)</strong><br />
+                <!-- <strong>UCLA Office of the Human Research Protection Program (OHRPP)</strong><br />
                 If you have questions about your rights as a research subject, or you have concerns or
                 suggestions and you want to talk to someone other than the researchers, you may contact the
                 UCLA OHRPP by phone: (310) 206-2040; by email: participants@research.ucla.edu or by mail:
-                Box 951406, Los Angeles, CA 90095-1406.<br /><br />
+                Box 951406, Los Angeles, CA 90095-1406.<br /><br /> -->
             </div>
         </div>
     </div>
@@ -126,17 +126,17 @@
     </div>
 
     <!--======== VIDEO ========-->
-    <div class="page-box fixed-box" id="video-box">
+    <!-- <div class="page-box fixed-box" id="video-box">
         <div class="video-container" id="video-container">
             <video id="this-video" preload="auto">
                 <source src="media/videos/cong.mp4" type="video/mp4">
             </video>
         </div>
         <div class="button" id="play-button" onclick="PLAY_VIDEO()">LOADING...</div>
-    </div>
+    </div> -->
 
     <!--======== VIDEO TASK ========-->
-    <div class="page-box fixed-box" id="video-response-box">
+    <!-- <div class="page-box fixed-box" id="video-response-box">
         <div class="question video-question" id='seen-question'>
             <p class="bold">Did you see a gray letter that briefly appeared in the video?</p>
             <label><div class="row option"><input class="radio radio-button" type="radio" name="seen" value="1" /><p class="option-text">Yes, I saw a letter.</p></div></label>
@@ -148,13 +148,13 @@
         </div>
         <p class="small-warning" id="video-response-warning">Please answer this question to continue the experiment. Thank you!</p>
         <div class="button" onclick="SUBMIT_VIDEO_QUESTION()">NEXT</div>
-    </div>
+    </div> -->
 
     <!--======== AQ QUESTION ========-->
     <div id="aq-box">
         <p id="aq-instr-text" class="center-text fixed-box">
-            You have completed the second part!<br /><br />
-            The last part will take about 5 minutes. You will read 50 simple statements one by one, and rate your agreement. <br /><br />
+            You have completed the first part!<br /><br />
+            The second part will take about 2 minutes. You will read 5 simple statements one by one, and rate your agreement. <br /><br />
             Hit SPACE to start!
         </p>
         <div id="aq-container" class="fixed-box">
@@ -248,8 +248,8 @@
             experiment.
             <br /><br />
             Yi-Chia Chen & Setareh Khoylow
-            <br />
-            yichiachen@g.ucla.edu
+            <!-- <br /> -->
+            <!-- yichiachen@g.ucla.edu -->
             <br />
             UCLA Computational Vision and Learning Laboratory
 
@@ -263,7 +263,7 @@
             <br />- Would cultural backgrounds influence memory of different objects?
             <br /><br />
 
-            If you have any questions, please feel free to contact the researcher Hongjing Lu at hongjing@ucla.edu.
+            <!-- If you have any questions, please feel free to contact the researcher Hongjing Lu at hongjing@ucla.edu. -->
         </p>
     </div>
 

@@ -50,7 +50,7 @@ class subjObject {
             that.num = -999;
             that.subjNumCallback();
         }
-        POST_DATA(this.subjNumScript, { 'directory_path': this.savingDir, 'file_name': this.subjNumFile }, SUBJ_NUM_UPDATE_SUCCEEDED, SUBJ_NUM_UPDATE_FAILED);
+        // POST_DATA(this.subjNumScript, { 'directory_path': this.savingDir, 'file_name': this.subjNumFile }, SUBJ_NUM_UPDATE_SUCCEEDED, SUBJ_NUM_UPDATE_FAILED);
     }
 
     assignCondition() {
@@ -78,11 +78,11 @@ class subjObject {
             'file_name': this.visitFile,
             'data': data
         };
-        $.ajax({
-            type: 'POST',
-            url: this.savingScript,
-            data: postData,
-        });
+        // $.ajax({
+        //     type: 'POST',
+        //     url: this.savingScript,
+        //     data: postData,
+        // });
     }
 
     getID(get_variable) {
@@ -139,11 +139,11 @@ class subjObject {
             'file_name': this.attritionFile,
             'data': data
         };
-        $.ajax({
-            type: 'POST',
-            url: this.savingScript,
-            data: postData,
-        });
+        // $.ajax({
+        //     type: 'POST',
+        //     url: this.savingScript,
+        //     data: postData,
+        // });
     }
 
     submitQ() {
@@ -157,11 +157,11 @@ class subjObject {
             'file_name': this.subjFile,
             'data': this.data
         };
-        $.ajax({
-            type: 'POST',
-            url: this.savingScript,
-            data: postData,
-        });
+        // $.ajax({
+        //     type: 'POST',
+        //     url: this.savingScript,
+        //     data: postData,
+        // });
     }
 
     detectVisibilityStart() {
@@ -280,11 +280,11 @@ class trialObject {
             'file_name': this.dataFile,
             'data': this.allData // data to save
         };
-        $.ajax({
-            type: 'POST',
-            url: this.savingScript,
-            data: postData,
-        });
+        // $.ajax({
+        //     type: 'POST',
+        //     url: this.savingScript,
+        //     data: postData,
+        // });
     }
 }
 
