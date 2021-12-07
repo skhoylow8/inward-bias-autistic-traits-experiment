@@ -1,0 +1,17 @@
+num	date	subjStartTime	trialNum	facingDir	stimName	background	inView	imagAdj	rt
+18	2021-11-22	18:57:33	1	left	averted_gaze/CC_L2_small.png	background/grassfield_adjusted.png	true	-150.99998474121094	8.417
+18	2021-11-22	18:57:33	2	right	averted_gaze/CC_R2_small.png	background/grassfield_adjusted.png	true	-162.99998474121094	2.581
+18	2021-11-22	18:57:33	3	right	averted_gaze/CC_R2_small.png	background/sea_adjusted.png	true	219.99998474121094	2.032
+18	2021-11-22	18:57:33	4	right	chair/Chair_Black_R.png	background/sea_adjusted.png	true	-197	1.502
+18	2021-11-22	18:57:33	5	right	averted_gaze/YC_R2_small.png	background/sea_adjusted.png	true	218.99998474121094	1.767
+18	2021-11-22	18:57:33	6	right	averted_gaze/YC_R2_small.png	background/grassfield_adjusted.png	true	212.99998474121094	1.844
+18	2021-11-22	18:57:33	7	left	averted_gaze/YC_L2_small.png	background/sea_adjusted.png	true	246.49998474121094	2.067
+18	2021-11-22	18:57:33	8	right	chair/Chair_R_small.png	background/grassfield_adjusted.png	true	-158.99998474121094	2.553
+18	2021-11-22	18:57:33	9	right	chair/Chair_Black_R.png	background/grassfield_adjusted.png	true	-262.5	1.732
+18	2021-11-22	18:57:33	10	left	chair/Chair_Black_L.png	background/grassfield_adjusted.png	true	-196	1.473
+18	2021-11-22	18:57:33	11	left	averted_gaze/YC_L2_small.png	background/grassfield_adjusted.png	true	99.99998474121094	2.112
+18	2021-11-22	18:57:33	12	left	averted_gaze/CC_L2_small.png	background/sea_adjusted.png	true	-115.99998474121094	2.996
+18	2021-11-22	18:57:33	13	right	chair/Chair_R_small.png	background/sea_adjusted.png	true	246.49998474121094	1.737
+18	2021-11-22	18:57:33	14	left	chair/Chair_Black_L.png	background/sea_adjusted.png	true	156.99998474121094	1.428
+18	2021-11-22	18:57:33	15	left	chair/Chair_L_small.png	background/sea_adjusted.png	true	-183	1.556
+18	2021-11-22	18:57:33	16	left	chair/Chair_L_small.png	background/grassfield_adjusted.png	true	163.99998474121094	1.644

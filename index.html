@@ -1,0 +1,278 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCLA Experiment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" />
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+</head>
+<body>
+    <noscript>It seems that JavaScript is disabled in your browser. Please go to settings and enable JavaScript for this experiment.</noscript>
+
+    <!--======== INSTRUCTIONS ========-->
+    <div class="page-box fixed-box" id="instr-box">
+        <p class="instructions center-text" id="instr-text"></p>
+        <img id="instr-img" src="media/blank.png" draggable="false" alt="Image Error: Please email yichiachen@g.ucla.edu with the message 'IMG-ERROR' to receive credit."></img>
+        <div id="instr-test-frame" style="display: none; background-image: url('media/prac_background.png');">
+            <img id="instr-test-img" src="media/prac.png" alt="Image Error: Please email yichiachen@g.ucla.edu with the message 'IMG-ERROR' to receive credit." draggable="false" style=" cursor: auto;">
+        </div>
+        <button class="button" id="next-button" onclick="instr.next()">NEXT</button>
+        <!--======== INFORMED CONSENT FORM ========-->
+        <div class="page-box" id="consent-box">
+            <div class="consent-instr">To conduct this experiment, we need to include this information sheet:</div>
+            <div class="form-area">
+                <strong>CONSENT FORM</strong><br /><br />
+                You are invited to participate in a research study on human cognition, conducted by Hongjing
+                Lu, PhD, of the Dept. of Psychology at UCLA. You were selected as a possible participant in
+                this study because you have normal or corrected vision, and are 18 years of age or older. For
+                scientific reasons, this consent form does not include complete information about the study
+                hypotheses and the research questions being tested. You will be fully debriefed following your
+                participation in the research.<br /><br />
+
+                <strong>Purpose of Study</strong><br />
+                The purpose of the study is to understand human perception and cognition.<br /><br />
+
+                <strong>Procedures Involved in Study</strong><br />
+                If you agree to participate, you may be presented with images, videos, or sounds on a computer
+                screen, and answer simple questions and/or perform simple tasks by interacting with a website
+                via a keyboard or a computer mouse. You may also be asked to fill out some questionnaires
+                about your personality or experience, which will take at max 15 minutes. Your responses will be
+                recorded by the computer and will not be identified with you in any way. You may receive a
+                demographic questionnaire to collect information of your age, gender, ethnicity, and language.
+                The session will take at most 60 minutes.<br /><br />
+
+                <strong>Potential Risks and Discomforts</strong><br />
+                There is no known risk/discomfort in this study. If you experience any discomfort during the
+                course of the experiment, you can stop at any time and notify the experimenter.<br /><br />
+
+                <strong>Potential Benefits to Subject</strong><br />
+                There are no direct benefits from participating in this study.<br /><br />
+
+                <strong>Potential Benefits to Society</strong><br />
+                The findings of the study will help improve procedures for making important decisions to avoid
+                unwanted biases. For example, individual’s cognitive tendencies may influence their decision
+                making on finance, relationships, or diets, and their behaviors in different contexts like internet
+                versus in-person interactions. By understanding how people differ from each other, we will be
+                able to design better environments for people to make rational and just decisions in different
+                domains in life.<br /><br />
+
+                <strong>Payment for Participation</strong><br />
+                You would receive 0.5 hour of credit every 30 minute for your psychology class if you signed up
+                for the study through the UCLA Psychology Department Subject Pool; otherwise, you would
+                receive the payment in the rate of $10 per hour for your participation.<br /><br />
+
+                <strong>Confidentiality</strong><br />
+                Your identity in this study will be treated as confidential. The results of the study, including
+                laboratory or any other data, may be published for scientific purposes but will not include any
+                identifiable references to you. The researchers will do their best to make sure that your private
+                information is kept confidential. Information about you will be handled as confidentially as
+                possible, but participating in research may involve a loss of privacy and the potential for a breach
+                in confidentiality. Study data will be physically and electronically secured.  As with any use of
+                electronic means to store data, there is a risk of breach of data security. Your data, including de-
+                identified data may be kept for use in future research.<br /><br />
+
+                Your IP Addresses may be collected to prevent the same IP address from participating twice.
+                Your platform ID (e.g., Mturk worker ID, Prolific ID, or Sona ID) will not be shared with
+                anyone outside of the research team and will not be linked to study responses. However, any
+                work performed on MTurk can be linked to the user’s public profile page. Thus, you may wish to
+                restrict what information you choose to share in your public profile.<br /><br />
+
+                <strong>Participation and Withdraw</strong><br />
+                Your participation is VOLUNTARY. You may withdraw from the experiment at any time
+                without suffering any negative consequences.<br /><br />
+
+                <strong>Identification of Investigators</strong><br />
+                If you have any questions, feel free to contact Dr. Hongjing Lu (hongjing@ucla.edu), at the
+                Department of Psychology, UCLA, 405 Hillgard Ave., Los Angeles, CA 90095-1563.<br /><br />
+
+                <strong>Rights of Research Subjects</strong><br />
+                You may withdraw your consent at any time and discontinue participation without penalty. You
+                are not waiving any legal claims, rights or remedies because of your participation in this research
+                study.<br /><br />
+
+                <strong>UCLA Office of the Human Research Protection Program (OHRPP)</strong><br />
+                If you have questions about your rights as a research subject, or you have concerns or
+                suggestions and you want to talk to someone other than the researchers, you may contact the
+                UCLA OHRPP by phone: (310) 206-2040; by email: participants@research.ucla.edu or by mail:
+                Box 951406, Los Angeles, CA 90095-1406.<br /><br />
+            </div>
+        </div>
+    </div>
+
+    <!--======== INSTRUCTIONS QUIZ ========-->
+    <div class="page-box fixed-box" id="quiz-box">
+        <div class="question bold">What is your job in this experiment?</div>
+        <label><div class="option row"><input class="radio-button" type="radio" name="quiz" value="forgot" /><p class="option-text">Select this option if you do not remember the instructions.</p></div></label>
+        <label><div class="option row"><input class="radio-button" type="radio" name="quiz" value="vertically"/><p class="option-text">I have to move the figure vertically until it looks good to me.</p></div></label>
+        <label><div class="option row"><input class="radio-button" type="radio" name='quiz' value="horizontally-wrong" /><p class="option-text">I have to move the figure horizontally until it looks good to others.</p></div></label>
+        <label><div class="option row"><input class="radio-button" type="radio" name='quiz' value="vertically-wrong" /><p class="option-text">I have to move the figure vertically until it looks good to others.</p></div></label>
+        <label><div class="option row"><input class="radio-button" type="radio" name='quiz' value="horizontally" /><p class="option-text">I have to move the figure horizontally until it looks good to me.</p></div></label>
+        <button class="button" onclick="SUBMIT_INSTR_Q()">SUBMIT</button>
+        <p class="warning" id="quiz-warning"></p>
+    </div>
+
+    <!--======== IMAGE TASK ========-->
+    <div class="page-box fixed-box" id="task-box">
+        <div class="center-text bold" id="task-header">Drag figure horizontally until it looks good to you.</div>
+        <div id="test-frame">
+            <img id="test-img" src="media/blank.png" alt="" draggable="false">
+        </div>
+        <div id="buffer-frame">
+            <img id="buffer-img" src="media/blank.png" alt="">
+        </div>
+        <button class="button" id="exp-button" onclick="END_TRIAL()">SUBMIT</button>
+    </div>
+
+    <!--======== VIDEO ========-->
+    <div class="page-box fixed-box" id="video-box">
+        <div class="video-container" id="video-container">
+            <video id="this-video" preload="auto">
+                <source src="media/videos/cong.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="button" id="play-button" onclick="PLAY_VIDEO()">LOADING...</div>
+    </div>
+
+    <!--======== VIDEO TASK ========-->
+    <div class="page-box fixed-box" id="video-response-box">
+        <div class="question video-question" id='seen-question'>
+            <p class="bold">Did you see a gray letter that briefly appeared in the video?</p>
+            <label><div class="row option"><input class="radio radio-button" type="radio" name="seen" value="1" /><p class="option-text">Yes, I saw a letter.</p></div></label>
+            <label><div class="row option"><input class="radio radio-button" type="radio" name="seen" value="0" /><p class="option-text">No, I didn't see any letter.</p></div></label>
+        </div>
+        <div class="question video-question" id='letter-question'>
+            <p class="bold">An uppercase letter was briefly flashed during the video. If you saw it, please enter the letter below. If you are not sure or did not see it, please make a guess (A-Z).</p>
+            <textarea id="letter"></textarea>
+        </div>
+        <p class="small-warning" id="video-response-warning">Please answer this question to continue the experiment. Thank you!</p>
+        <div class="button" onclick="SUBMIT_VIDEO_QUESTION()">NEXT</div>
+    </div>
+
+    <!--======== AQ QUESTION ========-->
+    <div id="aq-box">
+        <p id="aq-instr-text" class="center-text fixed-box">
+            You have completed the second part!<br /><br />
+            The last part will take about 5 minutes. You will read 50 simple statements one by one, and rate your agreement. <br /><br />
+            Hit SPACE to start!
+        </p>
+        <div id="aq-container" class="fixed-box">
+            <div id="aq-progress-bar"><span id="aq-progress">0</span>% completed</div>
+            <div class="aq-rating-container">
+                <div id="aqQ" class="center-text aq-heading"></div>
+                <div id="aq-options-container" class="row">
+                    <button id="aq-1" class="aq-button" value="1" onclick="AQ_RESPONSE(event)">Strongly Disagree</button>
+                    <button id="aq-2" class="aq-button" value="2" onclick="AQ_RESPONSE(event)">Slightly Disagree</button>
+                    <button id="aq-3" class="aq-button" value="3" onclick="AQ_RESPONSE(event)">Slightly Agree</button>
+                    <button id="aq-4" class="aq-button" value="4" onclick="AQ_RESPONSE(event)">Strongly Agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--======== DEBRIEFING QUESTIONS ========-->
+    <div class="page-box" id="questions-box">
+        <div class="question center-text heading">
+            You are almost done! <br /> Please answer these last 4 questions:
+        </div>
+        <div class="question">
+            <p class="bold">Did you complete this experiment seriously throughout (without responding randomly)?</p>
+            <p class="small-dim">You will receive credit regardless of what your answer is here. Please be honest for science! Thanks!</p>
+            <label><div class="row option"><input class="radio radio-button" type="radio" name="serious" value="0" /><p class="option-text">No, I didn't.</p></div></label>
+            <label><div class="row option"><input class="radio radio-button" type="radio" name="serious" value="1" /><p class="option-text">Yes, I did.</p></div></label>
+            <p class="small-warning" id="serious-warning">Please answer this question to complete the experiment. Thank you!</p>
+        </div>
+        <div class="question">
+            <p class="bold">Was the browser in the full-screen mode during all the trials?</p>
+            <p class="small-dim">You will receive credit regardless of what your answer is here. Please be honest for science! Thanks!</p>
+            <label><div class="row option"><input class="radio radio-button" type="radio" name="maximized" value="0" /><p class="option-text">No, it wasn't.</p></div></label>
+            <label><div class="row option"><input class="radio radio-button" type="radio" name="maximized" value="1" /><p class="option-text">Yes, it was.</p></div></label>
+            <p class="small-warning" id="maximized-warning">Please answer this question to complete the experiment. Thank you!</p>
+        </div>
+        <div class="question">
+            <p class="bold">Was any part of the procedure unclear? Did you have any problems completing any of the tasks?</p>
+            <p class="small-dim">You will receive credit regardless of what your answer is here. Please be honest for science! Thanks!</p>
+            <textarea id="problems" rows="6" cols="100"></textarea>
+            <p class="small-warning" id="problems-warning">Please answer this question to complete the experiment. Thank you!</p>
+        </div>
+        <div class="question">
+            <p class="bold">What is your gender?</p>
+            <label><div class="row option"><input class="radio-button" type="radio" name="gender" value="F" /><p class="option-text">Female</p></div></label>
+            <label><div class="row option"><input class="radio-button" type="radio" name="gender" value="M" /><p class="option-text">Male</p></div></label>
+            <label><div class="row option"><input class="radio-button" type="radio" name="gender" value="O" /><p class="option-text">Other</p></div></label>
+            <label><div class="row option"><input class="radio-button" type="radio" name="gender" value="N" /><p class="option-text">I would rather not say</p></div></label>
+            <p class="small-warning" id="gender-warning">Please answer this question to complete the experiment. Thank you!</p>
+        </div>
+        <div class="question">
+            <div class='row'>
+                <p class="bold">What is your age?</p>
+                <input class="age-input" type="number" id="age" min="0" max="80"/>
+            </div>
+            <p class="small-warning" id="age-warning">Please give a valid answer for this question. Thank you!</p>
+        </div>
+        <button class="button" onclick="SUBMIT_DEBRIEFING_Q()">SUBMIT</button>
+    </div>
+
+    <!--======== DEBRIEFING ========-->
+    <div class="page-box" id="debriefing-box">
+        <div class="heading center-text">Thank you very much!</div>
+
+        Now, the last thing to do is to hit END to submit your work.<br /><br />
+
+        If you are interested in what we are doing, see below for more information!<br /><br />
+        <button class="button" onclick="END_SONA()">END</button>
+
+        <strong>Debriefing Sheet:</strong><br />
+        <p style="font-size: 18px; padding-bottom: 5%;">
+            <br />
+            Whenever you pick up your phone to take a picture, you face an aesthetic task that
+            artists faced for thousands of years: How to frame a picture? Besides the famous rule
+            of thirds and golden ratio ideas, there is actually one very robust but undiscussed
+            preference: an inward bias. We like to frame an image in a way that makes the figure
+            in it face inward to the center of the image, leaving more space in its front than its
+            back, rather than outward to the frame borders.
+            <br /><br />
+            What we want to know in this study is why this is the case. We suspect that this
+            preference has evolved to help us “frame” the world with our visual field--when we turn
+            our head to a particular direction to look at a certain object, we are effectively
+            “framing” the visual world. An inward bias can thus serve an adaptive function: leaving
+            more space in the front of a figure allows us to see what is going to happen next if
+            the figure moves, or is interacted with in the future (since most things tend to happen
+            in the front rather than in the back of a person or an object). To test this idea, we
+            measure your social tendency, which is associated with how readily you make predictions
+            about future movements of social agents, and measure its association with the extent of
+            your inward bias!
+            <br /><br />
+            Please don't hesitate to contact us if you have any questions or concerns about this
+            experiment.
+            <br /><br />
+            Yi-Chia Chen & Setareh Khoylow
+            <br />
+            yichiachen@g.ucla.edu
+            <br />
+            UCLA Computational Vision and Learning Laboratory
+
+            <br /><br /><br /><br />
+            <strong>Here is some additional information about the bigger project this study is a part of:</strong><br />
+            <br />
+            We are studying human cognition by looking at how people differ in terms of personality,
+            cognitive tendencies, and skills. Here are a few example scientific questions we are looking at:
+            <br />- Do people agree what looks pretty and what looks bad?
+            <br />- How is one’s personality related to their judgement of social situations?
+            <br />- Would cultural backgrounds influence memory of different objects?
+            <br /><br />
+
+            If you have any questions, please feel free to contact the researcher Hongjing Lu at hongjing@ucla.edu.
+        </p>
+    </div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/expt.js"></script>
+    <script src="js/helperFunc.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
